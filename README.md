@@ -12,12 +12,17 @@ AI-powered documentation fetcher for the terminal using Google Gemini.
 
 ## Installation
 
+### From npm (Recommended)
 ```bash
-# Clone or download the repository
-cd doc-pilot
+npm install -g doc-pilot
+```
 
-# Install dependencies
+### From source
+```bash
+git clone https://github.com/Nik-09/doc-pilot.git
+cd doc-pilot
 npm install
+npm link
 ```
 
 ## Setup
@@ -26,44 +31,44 @@ npm install
 
 2. On first use, the tool will prompt you for your API key:
 ```bash
-node index.js find express use
+doc-pilot find express use
 ```
 
 Or set it manually:
 ```bash
-node index.js config --set-api-key
+doc-pilot config --set-api-key
 ```
 
 ## Usage
 
 ### Find documentation
 ```bash
-node index.js find <library> <function>
+doc-pilot find <library> <function>
 ```
 
 **Examples:**
 ```bash
 # Get documentation for express.use()
-node index.js find express use
+doc-pilot find express use
 
 # Get documentation for Array.map()
-node index.js find Array map
+doc-pilot find Array map
 
-# Get documentation for fs.readFile()
-node index.js find fs readFile
+# Get documentation for lodash.debounce()
+doc-pilot find lodash debounce
 ```
 
 ### Configuration commands
 
 ```bash
 # Show current configuration
-node index.js config --show-config
+doc-pilot config --show-config
 
 # Set or update API key
-node index.js config --set-api-key
+doc-pilot config --set-api-key
 
 # Reset configuration
-node index.js config --reset
+doc-pilot config --reset
 ```
 
 ## How it works
@@ -87,7 +92,10 @@ Configuration is stored in `~/.doc-pilot/config.json`
 - **@google/genai** - Google Gemini API SDK
 - **chalk** - Terminal styling
 - **commander** - CLI framework
-- **execa** - Process execution
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 

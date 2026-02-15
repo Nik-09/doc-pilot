@@ -1,18 +1,35 @@
 {
   "name": "doc-pilot",
   "version": "1.0.0",
+  "description": "AI-powered documentation fetcher for the terminal using Google Gemini",
   "main": "index.js",
+  "bin": {
+    "doc-pilot": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "documentation",
+    "cli",
+    "gemini",
+    "ai",
+    "docs",
+    "helper"
+  ],
+  "author": "Nik-09",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@google/genai": "^1.0.0",
     "chalk": "^5.6.2",
     "commander": "^13.1.0",
     "execa": "^9.6.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nik-09/doc-pilot.git"
   }
 }
